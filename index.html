@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ReactJS</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <!--
+      Document.createElement();
+    -->
+    <div id="root1"></div>
+
+    <!--
+      React.createElement()
+    -->
+
+    <!-- <script>
+      //DOM
+      const ulDOM = document.createElement("ul");
+      const liDOM1 = document.createElement("li");
+      liDOM1.innerText = "JavaScript";
+      const liDOM2 = document.createElement("li");
+      liDOM2.innerText = "ReactJs";
+      ulDOM.appendChild(liDOM1);
+      ulDOM.appendChild(liDOM2);
+
+      // document.body.appendChild(ulDOM);
+
+      //React -> React DOM
+      // React.createElement(type,props,children,n)
+      const domContainer = document.getElementById("root1");
+      const root1 = ReactDOM.createRoot(domContainer);
+      const ulReact = React.createElement(
+        "ul",
+        null,
+        React.createElement("li", null, "JavaScript"),
+        React.createElement("li", null, "ReactJS")
+      );
+
+      // root1.render(ulReact);
+    </script> -->
+
+    <script type="text/babel">
+      const courses = [
+        {
+          id: 15,
+          title: "HTML CSS Pro",
+          slug: "htmlcss",
+          description:
+            "T\u1eeb c\u01a1 b\u1ea3n t\u1edbi chuy\u00ean s\u00e2u, th\u1ef1c h\u00e0nh 8 d\u1ef1 \u00e1n, h\u00e0ng tr\u0103m b\u00e0i t\u1eadp, trang h\u1ecfi \u0111\u00e1p ri\u00eang, c\u1ea5p ch\u1ee9ng ch\u1ec9 sau kh\u00f3a h\u1ecdc v\u00e0 mua m\u1ed9t l\u1ea7n h\u1ecdc m\u00e3i m\u00e3i.",
+          image: "courses/15/62f13d2424a47.png",
+          icon: "courses/15/62385d6c63dfa.png",
+          video_type: "upload",
+          video: null,
+          old_price: 2499000,
+          price: 1299000,
+          pre_order_price: 699000,
+          students_count: 2208,
+          is_pro: true,
+          is_coming_soon: false,
+          is_selling: true,
+          published_at: "2022-08-18T17:00:00.000000Z",
+          is_registered: false,
+          user_progress: 0,
+          last_completed_at: null,
+          image_url:
+            "https://files.fullstack.edu.vn/f8-prod/courses/15/62f13d2424a47.png",
+          icon_url:
+            "https://files.fullstack.edu.vn/f8-prod/courses/15/62385d6c63dfa.png",
+          video_url: "",
+          landing_page_url: "/landing/htmlcss",
+          is_pre_order: false,
+          is_published: true,
+        },
+        {
+          id: 19,
+          title: "JavaScript Pro",
+          slug: "javascript-pro",
+          description: "Kh\u00f3a h\u1ecdc JavaScript Pro",
+          image: "courses/19/62f13cb607b4b.png",
+          icon: "courses/19/62f13cb685c81.png",
+          video_type: "upload",
+          video: null,
+          old_price: 0,
+          price: 0,
+          pre_order_price: 0,
+          students_count: 0,
+          is_pro: true,
+          is_coming_soon: true,
+          is_selling: false,
+          published_at: "2023-07-31T17:00:00.000000Z",
+          is_registered: false,
+          user_progress: 0,
+          last_completed_at: null,
+          image_url:
+            "https://files.fullstack.edu.vn/f8-prod/courses/19/62f13cb607b4b.png",
+          icon_url:
+            "https://files.fullstack.edu.vn/f8-prod/courses/19/62f13cb685c81.png",
+          video_url: "",
+          landing_page_url: "/landing/javascript-pro",
+          is_pre_order: false,
+          is_published: false,
+        },
+        {
+          id: 20,
+          title: "NextJS Pro",
+          slug: "reactjs-pro",
+          description: "Kh\u00f3a h\u1ecdc NextJS Pro",
+          image: "courses/20/648020fc16597.png",
+          icon: "courses/20/648020fcc8000.png",
+          video_type: "upload",
+          video: null,
+          old_price: 0,
+          price: 0,
+          pre_order_price: 0,
+          students_count: 0,
+          is_pro: true,
+          is_coming_soon: true,
+          is_selling: false,
+          published_at: "2023-11-30T17:00:00.000000Z",
+          is_registered: false,
+          user_progress: 0,
+          last_completed_at: null,
+          image_url:
+            "https://files.fullstack.edu.vn/f8-prod/courses/20/648020fc16597.png",
+          icon_url:
+            "https://files.fullstack.edu.vn/f8-prod/courses/20/648020fcc8000.png",
+          video_url: "",
+          landing_page_url: "/landing/reactjs-pro",
+          is_pre_order: false,
+          is_published: false,
+        },
+        {
+          id: 24,
+          title: "NodeJS Pro",
+          slug: "nodejs-pro",
+          description: "NodeJS Pro",
+          image: "courses/24/648021c0652c6.png",
+          icon: "courses/24/648021c0cd73f.png",
+          video_type: "upload",
+          video: null,
+          old_price: 0,
+          price: 0,
+          pre_order_price: 0,
+          students_count: 0,
+          is_pro: true,
+          is_coming_soon: true,
+          is_selling: false,
+          published_at: "2024-04-06T06:20:00.000000Z",
+          is_registered: false,
+          user_progress: 0,
+          last_completed_at: null,
+          image_url:
+            "https://files.fullstack.edu.vn/f8-prod/courses/24/648021c0652c6.png",
+          icon_url:
+            "https://files.fullstack.edu.vn/f8-prod/courses/24/648021c0cd73f.png",
+          video_url: "",
+          landing_page_url: "/landing/nodejs-pro",
+          is_pre_order: false,
+          is_published: false,
+        },
+      ];
+      const PostItem = ({ course }) => (
+        <div className="post-item">
+          <img
+            src={course.image_url}
+            alt=" fds "
+            onClick={() => {
+              alert(course.title);
+            }}
+          />
+          <h1>{course.title}</h1>
+        </div>
+      );
+      function Button({ title, primary }) {
+        console.log(primary);
+        return <button>{title}</button>;
+      }
+      function Input({ label, ...Props }) {
+        return (
+          <div class="hihi">
+            <label>{label}</label>
+            <input {...Props} />
+          </div>
+        );
+      }
+      function Brand({ data, children }) {
+        return (
+          <ul>
+            {data.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        );
+      }
+      // App.js
+      function App() {
+        const data = ["Iphone", "SamSung", "Xiaomi"];
+        return (
+          // <div id="post-list">
+          //   {courses.map((course) => (
+          //     <PostItem key={course.id} course={course} />
+          //   ))}
+          // </div>
+          <div id="wrapper">
+            <Brand data={data}></Brand>
+          </div>
+        );
+      }
+      ReactDOM.render(<App />, document.getElementById("root1"));
+    </script>
+  </body>
+</html>
